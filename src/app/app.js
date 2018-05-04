@@ -26,6 +26,7 @@ require('bootstrap');
 require('admin-lte');
 require('moment');
 require('@uirouter/angularjs');
+require('image-compressor');
 
 // Angular plugins declaration.
 let angular = require('angular');
@@ -37,11 +38,12 @@ require('angular-translate-loader-static-files');
 require('angular-moment');
 require('angular-moment-picker');
 require('ng-data-annotation');
+require('angular-file-upload');
 
 // Module declaration.
 let ngModule = angular.module('ngApp', [
     'ui.router', 'blockUI', 'toastr', 'pascalprecht.translate',
-    'angularMoment', 'moment-picker', 'ngDataAnnotations']);
+    'angularMoment', 'moment-picker', 'ngDataAnnotations', 'angularFileUpload']);
 
 ngModule.config(function($urlRouterProvider, $translateProvider, $httpProvider, urlStates){
 

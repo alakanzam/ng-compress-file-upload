@@ -3,24 +3,12 @@
       ng-init="init()">
     <div class="panel-body">
 
-        <div class="input-group"
-             moment-picker="model.date"
-             format="YYYY-MM-DD">
-            <input class="form-control"
-                   placeholder="Select a date"
-                   ng-model="model.date"
-                   ng-model-options="{ updateOn: 'blur' }"
-                   ng-function-validate="is-valid-date"
-                   ng-function-validate-is-valid-date="validationService.bIsValidDateTime(model.date)">
-            <span class="input-group-addon">
-                <i class="glyphicon glyphicon-calendar"></i>
-            </span>
+        <div class="well my-drop-zone" nv-file-over=""
+             uploader="uploader">
+            Base drop zone
         </div>
 
-        <div ng-if="ordinaryForm.$invalid">
-            <ul class="validation-summary">
-                <li>Validation error.</li>
-            </ul>
-        </div>
     </div>
+
+
 </form>
