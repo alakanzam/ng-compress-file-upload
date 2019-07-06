@@ -23,7 +23,10 @@ exports = module.exports = {
             test: /\.js$/,
             exclude: /(node_modules)/,
             use: {
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                options: {
+                    presets: [['es2015', {"modules": false}]]
+                }
             }
         });
 
@@ -40,6 +43,18 @@ exports = module.exports = {
             }, {
                 loader: 'expose-loader',
                 options: '$'
+            }]
+        });
+
+        //#endregion
+
+        //#region Import GZip-JS
+
+        rules.push({
+            test: require.resolve('gzip-js'),
+            use: [{
+                loader: 'expose-loader',
+                options: 'GZip'
             }]
         });
 

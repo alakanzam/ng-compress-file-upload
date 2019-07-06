@@ -3,7 +3,9 @@
       ng-init="init()">
     <div class="panel-body">
 
-        <div class="well my-drop-zone" nv-file-over=""
+        <div class="well my-drop-zone"
+             nv-file-drop=""
+             nv-file-over=""
              uploader="uploader">
             Base drop zone
         </div>
@@ -11,4 +13,8 @@
     </div>
 
 
+    <div class="panel-body">
+        <ui-cropper image="myImage" result-image="myCroppedImage" result-blob="croppedImageBlob" ng-style="{'height': 512, 'width': 512}"></ui-cropper>
+        <button class="btn btn-primary" ng-click="upload()">Upload</button>
+    </div>
 </form>

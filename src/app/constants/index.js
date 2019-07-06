@@ -4,4 +4,5 @@ module.exports = function (ngModule) {
     * */
     require('./app-settings.constant')(ngModule);
     require('./url-states.constant')(ngModule);
+    require('./api-urls.constant')(ngModule);
 };

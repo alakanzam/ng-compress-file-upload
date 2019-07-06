@@ -97,7 +97,7 @@ module.exports = (env, argv) => {
     return {
         context: settings.paths.getSource(__dirname),
         entry: {
-            'jQueryVendors': ['jquery', 'bluebird', 'bootstrap', 'admin-lte', 'moment'],
+            'jQueryVendors': ['jquery', 'bluebird', 'bootstrap', 'admin-lte', 'moment', 'gzip-js'],
             'angularVendors': [
                 'angular', '@uirouter/angularjs', 'angular-block-ui', 'angular-toastr',
                 'angular-translate', 'angular-translate-loader-static-files', 'angular-moment', 'angular-moment-picker'],

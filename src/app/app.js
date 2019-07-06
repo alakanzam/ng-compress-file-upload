@@ -15,6 +15,7 @@ require('../../node_modules/angular-block-ui/dist/angular-block-ui.css');
 
 // Moment picker.
 require('../../node_modules/angular-moment-picker/dist/angular-moment-picker.css');
+require('../../node_modules/ui-cropper/compile/minified/ui-cropper.css');
 
 // Import app style.
 require('./app.scss');
@@ -25,8 +26,7 @@ require('bluebird');
 require('bootstrap');
 require('admin-lte');
 require('moment');
-require('@uirouter/angularjs');
-require('image-compressor');
+require('ui-cropper');
 
 // Angular plugins declaration.
 let angular = require('angular');
@@ -43,7 +43,7 @@ require('angular-file-upload');
 // Module declaration.
 let ngModule = angular.module('ngApp', [
     'ui.router', 'blockUI', 'toastr', 'pascalprecht.translate',
-    'angularMoment', 'moment-picker', 'ngDataAnnotations', 'angularFileUpload']);
+    'angularMoment', 'moment-picker', 'ngDataAnnotations', 'angularFileUpload', 'uiCropper']);
 
 ngModule.config(function($urlRouterProvider, $translateProvider, $httpProvider, urlStates){
 
